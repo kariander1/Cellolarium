@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="rtl">
+<head runat="server">
+    <title>סלולאריום</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color:#D0DAEC">
+    <form id="form1" runat="server">
+    <center>
+   
+        
+        
+        </center>
+        <div id="wrap">
+  <div id="masthead">
+    <h1>סלולאריום </h1>
+   <h1 style="font-size:14px; color:Gray; letter-spacing:2px; font-family:Guttman Yad">כל מה שאתה צריך לדעת על הטלפון שלך...</h1>
+  
+
+
+
+    <h2><a href="Home.aspx">דף הבית</a> | <a href="http://www.free-css.co.il/">צור קשר</a> </h2>
+    <br />
+    <img id="timecont" src="images/GalaxyS3top.jpg" alt="time"/> <%=time%>
+      
+  </div>
+  <div id="menucontainer">
+    <div id="menunav">
+      <ul>
+        <li><a href="Upcoming.aspx"><span>מה הבא בתור?</span></a></li>
+       <li><a href="#"><span>מאגר הטלפונים</span></a></li>
+       <li><a href="OSSelection.aspx"><span>מערכות הפעלה</span></a></li>
+       <li><a href="Registraion.aspx"><span>הרשמה</span></a></li>
+        <li><a href="Home.aspx"><span>דף הבית</span></a></li>
+      </ul>
+    </div>
+    <table id="gal">
+        <tr> 
+            <td valign="top" style="height:218px; width:202px;"> 
+                <p>
+                    <font> 
+                        <div class="login">
+                         <%=Session["warn"] %>
+                   <br />
+                        <%=logIn %>
+                         <div style="padding-top:20px">
+                          <%=hello %>
+                       </div>
+                        <%=topPanel %>
+                       </div>
+                  </font>
+               </p>
+            </td>
+       </tr>
+    </table>
+    
+      
+  </div>
+  <div id="container">
+   
+    <div id="sidebar">
+     
+    
+ 
+      <h3 style="padding-top:211px;">טלפון השבוע</h3>
+      
+      <img src="images/Galaxy3.jpg" alt="" style="width:200px; height:193px"/>
+    
+      <p>Samsung Galaxy S III  סמסונג גלקסי אס 3 הוא טלפון חכם בעל מסך מגע של חברת סמסונג, השלישי מסדרת Samsung Galaxy S. המכשיר משלב יכולות של טלפון סלולרי ומחשב כף יד המסוגל להתחבר לאינטרנט.
+
+המכשיר הוצג לראשונה ב-3 במאי 2012, בלונדון, ושווק לראשונה ב-29 במאי באותה השנה, ב-28 מדינות. </p>
+<a >למידע נוסף...</a>
+    </div>
+        <div id="content">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    
+  <div id="footer">
+  </div>
+</div>
+    </form>
+</body>
+</html>
